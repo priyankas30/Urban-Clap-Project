@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* .input-group {
+    margin-top: 20px;
+} */
+
+.btn {
+    margin-top: 45px;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    background: transparent;
+    /* border: none;
+    border-bottom: 2px solid rgb(136, 135, 135); */
+    margin-top: 10px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input.ng-invalid {
+    border-left: 2px solid red;
+}
+
+input.ng-valid {
+    border-left: 2px solid green;
+}
+
+.error {
+    color: red;
+    font-size: 15px;
+}

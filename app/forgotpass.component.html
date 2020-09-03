@@ -1,0 +1,32 @@
+div class="container-fluid">
+    <div class="row">
+        <div class="col-0 col-sm-4"></div>
+        <div class="col-12 col-sm-4" d-flex justify-content-center>
+            <h1>Forgot Password ?</h1>
+
+            <form #submitForm = "ngForm" (ngSubmit) = "getValues(submitForm.value)">
+                <div class="form-group flex-nowrap">
+                    <label for="email">Enter registered email id:</label>
+                    <input type="email" email class="form-control" placeholder="email id" 
+                    #email = "ngModel" ngModel name="email" required >
+                </div>
+                <span *ngIf ="email.invalid && email.touched" class="error">*Email is invalid.</span>
+    
+                <div class="form-group flex-nowrap">
+                    <label for="newpassword">Enter new password:</label>
+                    <input type="password" class="form-control" placeholder="new password" #newpassword = "ngModel" ngModel name="newpassword" required minlength="4" >
+                </div>
+                <span *ngIf ="newpassword.invalid && newpassword.touched" class="error">*Password is invalid.</span>
+    
+                <div class="form-group flex-nowrap">
+                    <label for="retypenewpassword">Re-type new password</label>
+                    <input type="password" class="form-control" placeholder="retype newpassword" #confirmpassword = "ngModel" ngModel name="confirmpassword" required >
+                </div>
+                <span *ngIf ="boo == 'false' && confirmpassword.touched" class="error">*Password mismatch.</span>
+    
+                <button class="btn btn-secondary btn-lg btn-block">Change Password</button>
+            </form>
+        </div>
+        <div class="col-0 col-sm-4"></div>
+    </div>
+</div>
